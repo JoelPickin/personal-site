@@ -1,0 +1,14 @@
+﻿@page "/posts"
+
+    <div class="posts-section">
+        <h1>Posts.</h1>
+
+        <div>
+            <ul>
+                @foreach (var item in PostList)
+                {
+                    <li><a href="@($"viewpost/{item.Id}")"> @item.Title </a></li>
+                }
+            </ul>
+        </div>
+    </div>

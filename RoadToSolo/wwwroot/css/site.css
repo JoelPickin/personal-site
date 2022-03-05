@@ -1,0 +1,139 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+:root {
+   
+}
+
+html, body {
+    font-family: 'Comfortaa', cursive, 'Space Mono', monospace, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 700px;
+}
+
+.p {
+    font-family: 'Space Mono', monospace;
+}
+
+.main {
+   
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 28px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+.content {
+   
+}
+
+.about-section {
+    padding-top: 40px;
+}
+
+.posts-section {
+    
+}
+
+.road-section {
+    padding-top: 40px;
+}
+
+.dynamic-content {
+    font-weight: 900;
+    font-size: 1.25em;
+    font-family: 'Space Mono'
+}
+
+.cls-1, .cls-7, .cls-9 {
+    fill: none;
+}
+
+.cls-1, .cls-10, .cls-11, .cls-12, .cls-2, .cls-3, .cls-4, .cls-7, .cls-8, .cls-9 {
+    stroke: #000;
+    stroke-miterlimit: 10;
+}
+
+.cls-1 {
+    stroke-width: 2px;
+}
+
+.cls-3, .cls-6 {
+    fill: #fff;
+}
+
+.cls-4 {
+    fill: #a67c52;
+}
+
+.cls-5 {
+    fill: #c1272d;
+}
+
+.cls-11, .cls-7 {
+    stroke-width: 0.5px;
+}
+
+.cls-8 {
+    fill: #8cc63f;
+}
+
+.cls-10, .cls-11, .cls-12 {
+    fill: #fefbea;
+}
+
+.cls-12 {
+    stroke-width: 0.3px;
+}
+
+.cls-13 {
+    fill: red;
+}
+
+@media (max-width: 767.98px) {
+    .main .top-row:not(.auth) {
+        display: none;
+    }
+
+    .main .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .main .top-row a, .main .top-row .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    app {
+        flex-direction: row;
+    }
+}
