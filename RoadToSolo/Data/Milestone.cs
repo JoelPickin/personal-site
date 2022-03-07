@@ -9,7 +9,7 @@ namespace RoadToSolo.Data
     {
         public string Title { get; set; }
         public bool IsAchieved { get; set; }
-        public DateTime AchievedDate { get; set; }
-        public DateTime PredictedDate { get; set; }
+        public string AchievedDate { get; set; }
+        public string PredictedDate { get; set; }
     }
 }

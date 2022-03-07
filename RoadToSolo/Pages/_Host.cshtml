@@ -1,8 +1,10 @@
 ﻿@page "/"
 @namespace RoadToSolo.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
     Layout = null;
+    string Title = "Road To Solo";
 }
 
 <!DOCTYPE html>
@@ -10,7 +12,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoadToSolo</title>
+    <title>@Title</title>
     <base href="~/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="css/site.css" rel="stylesheet" />
@@ -24,16 +26,33 @@
     </app>
 
     @*<div id="blazor-error-ui">
-        <environment include="Staging,Production">
-            An error has occurred. This application may no longer respond until reloaded.
-        </environment>
-        <environment include="Development">
-            An unhandled exception has occurred. See browser dev tools for details.
-        </environment>
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>*@
+            <environment include="Staging,Production">
+                An error has occurred. This application may no longer respond until reloaded.
+            </environment>
+            <environment include="Development">
+                An unhandled exception has occurred. See browser dev tools for details.
+            </environment>
+            <a href="" class="reload">Reload</a>
+            <a class="dismiss">🗙</a>
+        </div>*@
 
     <script src="_framework/blazor.server.js"></script>
+
+    @{
+        @*var x = ViewContext.RouteData.Values.FirstOrDefault(x => x.Value.ToString() == "roadtosolo").Value;
+
+        if (x != null)
+        {
+            if (x.ToString() == "roadtosolo")
+            {
+                var y = 1;
+        <div class="content">
+            <script async data-uid="8177699513" src="https://creative-artisan-7470.ck.page/8177699513/index.js"></script>
+        </div>
+            }
+        }*@
+    }
+
+
 </body>
 </html>

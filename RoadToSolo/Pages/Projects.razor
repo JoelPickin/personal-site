@@ -1,10 +1,12 @@
 ﻿@page "/projects"
 
-<h1>Projects</h1>
+<div class="top-section">
+    <h1>Projects</h1>
 
-<ul>
-    @foreach (var project in ProjectList)
-    {
-        <li><a href="@($"viewproject/{project.Id}")">Project @project.Id: @project.Title</a></li>
-    }
-</ul>
+    <ul>
+        @foreach (var project in ProjectList)
+        {
+            <li><a href="@($"viewproject/{project.Id}")">Project @project.Id: @project.Title</a></li>
+        }
+    </ul>
+</div>
