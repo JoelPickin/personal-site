@@ -62,27 +62,6 @@ a:hover {
     text-decoration: none;
 }
 
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
-    column-gap: 20px;
-}
-
-.nav-icon {
-    height: 20px;
-    width: 20px;
-    align-content: center;
-}
-
-.nav-icon:hover {
-    fill: grey;
-}
-
-.nav-icons {
-
-}
 
 .content {
 }
@@ -199,6 +178,13 @@ a:hover {
     padding: 0;
 }
 
+#toggle-btn {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -212,42 +198,42 @@ a:hover {
         margin-left: 0;
     }
 
-    .nav-icon {
-        height: 40px;
-        width: 40px;
+    .visible {
+        position: relative;
     }
 
-    .nav-menu {
+    .visible a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .hidden {
         display: none;
     }
 
-    #flyoutMenu {
-        width: 100vw;
-        height: 100vh;
-        background-color: #FFE600;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translate3d(-100vw, 0, 0);
-        transition: transform .3s cubic-bezier(0, .52, 0, 1);
-        overflow: scroll;
-        z-index: 1000;
-    }		
+    .nav-bar {
+        display: none;
+    }
 
-        #flyoutMenu h2 a {
-            color: #333;
-            margin-left: 15px;
-            text-decoration: none;
+    .nav-icons {
+        display: none;
+    }
+
+    .btnToggled {
+        animation: rotate-toggle 1s ease-in forwards, opacity-toggle 1s linear forwards;
+    }
+
+    @keyframes rotate-toggle {
+        100% {
+            transform: rotate(-180deg) translate(0, -1px);
         }
+    }
 
-            #flyoutMenu h2 a:hover {
-                text-decoration: underline;
-            }
-        #flyoutMenu.show {
-            transform: translate3d(0vw, 0, 0);
-        }		
-    .show {
-        transform: translate3d(0vw, 0, 0);
+    @keyframes opacity-toggle {
+        100% {
+            opacity: 0;
+        }
     }
 }
 
@@ -260,7 +246,7 @@ a:hover {
         display: flex;
         flex-direction: row;
         align-content: center;
-        justify-content: flex-start;
+        justify-content: space-between;
         column-gap: 20px;
     }
 
@@ -268,12 +254,37 @@ a:hover {
         display: none;
     }
 
-    .show {
+    .visible {
         display: none;
     }
 
-    .nav-div .nav-menu {
-        /* Never collapse the sidebar for wide screens */
+    .hidden {
+        display: none;
+    }
+
+    nav {
         display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        column-gap: 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        column-gap: 20px;
+    }
+
+    .nav-icon {
+        height: 20px;
+        width: 20px;
+        align-content: center;
+    }
+
+    .nav-icon:hover {
+        fill: grey;
     }
 }

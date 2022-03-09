@@ -1,51 +1,77 @@
-﻿<div class="@NavMenuCssClass" id="flyoutMenu">
-    <h2><a href="#">Home</a></h2>
-    <h2><a href="#">About</a></h2>
-    <h2><a href="#">Contact</a></h2>
-    <h2><a href="#">Search</a></h2>
-</div>
-
-<nav>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <RoadToSolo.Pages.Svg.HamburgerIcon/>
-    </button>
-    <div class="nav-menu">
-        <ul class="nav-bar">
-            <li class="nav-item">
-                <NavLink href="" Match="NavLinkMatch.All">
-                    <span aria-hidden="true"></span> Home
-                </NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink href="projects">
-                    <span aria-hidden="true"></span> Projects
-                </NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink href="roadtosolo">
-                    <span aria-hidden="true"></span> Road To Solo
-                </NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink href="blog">
-                    <span aria-hidden="true"></span> Blog
-                </NavLink>
-            </li>
-        </ul>
+﻿<nav>
+    <div class="navbar-toggler">
+        <button class="@BtnToggled" id="toggle-btn" @onclick="ToggleNavMenu">
+            <RoadToSolo.Pages.Svg.HamburgerIcon />
+        </button>
+        @*<div class="@NavMenuCssClass">
+            <RoadToSolo.Pages.Svg.TwitterIcon />
+            <RoadToSolo.Pages.Svg.GithubIcon />
+        </div>*@
     </div>
+    <ul class="nav-bar">
+        <li class="nav-item">
+            <NavLink href="" Match="NavLinkMatch.All">
+                <span aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink href="projects">
+                <span aria-hidden="true"></span> Projects
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink href="roadtosolo">
+                <span aria-hidden="true"></span> Road To Solo
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink href="blog">
+                <span aria-hidden="true"></span> Blog
+            </NavLink>
+        </li>
+    </ul>
     <div class="nav-icons">
-        <RoadToSolo.Pages.Svg.TwitterIcon/>
-        <RoadToSolo.Pages.Svg.GithubIcon/>
+        <RoadToSolo.Pages.Svg.TwitterIcon />
+        <RoadToSolo.Pages.Svg.GithubIcon />
     </div>
 </nav>
 
-@code {
-    private bool collapseNavMenu = true;
+<nav class="@NavMenuCssClass">
+    <ul>
+        <li>
+            <NavLink href="" Match="NavLinkMatch.All">
+                <span aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li>
+            <NavLink href="projects">
+                <span aria-hidden="true"></span> Projects
+            </NavLink>
+        </li>
+        <li>
+            <NavLink href="roadtosolo">
+                <span aria-hidden="true"></span> Road To Solo
+            </NavLink>
+        </li>
+        <li>
+            <NavLink href="blog">
+                <span aria-hidden="true"></span> Blog
+            </NavLink>
+        </li>
+    </ul>
+</nav>
 
-    private string NavMenuCssClass => collapseNavMenu ? "show" : null;
+@code {
+    private bool hideNavMenu = true;
+    private bool showToggleBtn = true;
+
+    private string NavMenuCssClass => hideNavMenu ? "hidden" : "visible";
+    private string BtnToggled => showToggleBtn ? "btnNotToggled" : "btnToggled";
+
 
     private void ToggleNavMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+        hideNavMenu = !hideNavMenu;
+        showToggleBtn = !showToggleBtn;
     }
 }
