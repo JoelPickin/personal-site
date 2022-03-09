@@ -6,9 +6,10 @@
 
 html, body {
     font-family: 'Comfortaa', cursive, 'Space Mono', monospace, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    max-width: 700px;
+    max-width: 900px;
     align-content: center;
     margin: auto;
+    background-color: #f4f4f4;
 }
 
 nav {
@@ -36,6 +37,10 @@ nav {
 
 .main {
     /*grid-column: 2;*/
+    background-color: white;
+    border: solid 1px #dddddd;
+    padding: 0px 40px 0px 40px;
+    margin: 20px 0px 20px 0px;
 }
 
 h1 {
@@ -76,7 +81,7 @@ a:hover {
 }
 
 .nav-icons {
-    margin-right: 30px;
+
 }
 
 .content {
@@ -184,6 +189,16 @@ a:hover {
     fill: red;
 }
 
+.nav-hamburger {
+    color: black;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-toggler {
+    padding: 0;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -196,10 +211,69 @@ a:hover {
     .main .top-row a, .main .top-row .btn-link {
         margin-left: 0;
     }
+
+    .nav-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    #flyoutMenu {
+        width: 100vw;
+        height: 100vh;
+        background-color: #FFE600;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate3d(-100vw, 0, 0);
+        transition: transform .3s cubic-bezier(0, .52, 0, 1);
+        overflow: scroll;
+        z-index: 1000;
+    }		
+
+        #flyoutMenu h2 a {
+            color: #333;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+            #flyoutMenu h2 a:hover {
+                text-decoration: underline;
+            }
+        #flyoutMenu.show {
+            transform: translate3d(0vw, 0, 0);
+        }		
+    .show {
+        transform: translate3d(0vw, 0, 0);
+    }
 }
 
 @media (min-width: 768px) {
     app {
         flex-direction: row;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-start;
+        column-gap: 20px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .nav-div .nav-menu {
+        /* Never collapse the sidebar for wide screens */
+        display: flex;
     }
 }
