@@ -1,30 +1,32 @@
 ﻿@page "/"
 
-<div class="top-section">
-    <h1>Hey.</h1>
+    <div class="page-div">
+        <div class="top-section">
+            <h1>Hey.</h1>
 
-    <div class="about">
-        <p>
-            I’m Joel. I’m a self-taught software developer from the UK.
+            <div class="about">
+                <p>
+                    I’m Joel. I’m a self-taught software developer from the UK.
 
-            In <span class="dynamic-content">@daysLeftAtWork</span> days I will be leaving my job to become a solo founder and build cool stuff on the internet,
-            with the overall goal of finding financial freedom.
-        </p>
+                    In <span class="dynamic-content">@daysLeftAtWork</span> days I will be leaving my job to become a solo founder and build cool stuff on the internet,
+                    with the overall goal of finding financial freedom.
+                </p>
 
+            </div>
+            <div class="about-project">
+                <p>
+                    My projects have made <span class="dynamic-content">@revenue</span> and I have  <span class="dynamic-content">@runway</span> days of savings currently put away.
+
+                    I went from self-taught to senior in 4 years but the employed lifestyle has never been my goal.
+
+                    Watch me <span style="text-decoration: line-through; text-decoration-thickness: 2px;">succeed</span> fail through this site and my personal diary in the <a href="/roadtosolo">Road To Solo newsletter</a>.
+                </p>
+            </div>
+        </div>
+
+        <Road />
+
+        <Posts />
+
+        <SubscribeForm />
     </div>
-    <div class="about-project">
-        <p>
-            My projects have made <span class="dynamic-content">@revenue</span> and I have  <span class="dynamic-content">@runway</span> days of savings currently put away.
-
-            I went from self-taught to senior in 4 years but the employed lifestyle has never been my goal.
-
-            Watch me <span style="text-decoration: line-through; text-decoration-thickness: 2px;">succeed</span> fail through this site and my personal diary in the <a href="/roadtosolo">Road To Solo newsletter</a>.
-        </p>
-    </div>
-</div>
-
-<Road />
-
-<Posts />
-
-<SubscribeForm/>

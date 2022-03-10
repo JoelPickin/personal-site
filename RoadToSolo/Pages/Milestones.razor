@@ -1,0 +1,25 @@
+﻿<div class="milestone-container">
+    <h1 class="milestones-section-title">Milestones</h1>
+    <div class="milestone-span"></div>
+    @foreach (var milestone in MilestonesList)
+    {
+        <div class="milestone">
+            <h2 class="milestone-title">@milestone.MilestoneIndicator</h2>
+            <h2 class="milestone-title">@milestone.Title</h2>
+
+            @if (milestone.IsAchieved)
+            {
+                <p class="milestone-date">@milestone.AchievedDate</p>
+            }
+            else
+            {
+                <p class="milestone-date">@milestone.PredictedDate</p>
+            }
+        </div>
+        <div class="milestone-span"></div>
+    }
+</div>
+
+@code {
+
+}
