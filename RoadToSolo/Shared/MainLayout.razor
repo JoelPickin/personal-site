@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager MyNavigationManager
 
 <div class="container">
     <div class="main">
@@ -10,7 +11,19 @@
         </div>
     </div>
 
-    <div class="left-sidebar"> 
-        <RoadToSolo.Pages.Milestones/>
+    <div hidden="@IsHidden" class="left-sidebar">
+        <RoadToSolo.Pages.Milestones />
+    </div>
+    <div hidden="@IsHidden" class="right-sidebar">
+        <RoadToSolo.Pages.Metrics />
     </div>
 </div>
+
+@code {
+        public bool IsHidden = true;
+
+        MyNavigationManager = new NavigationManager {get; set;}
+
+
+    var x = MyNavigationManager.Uri;
+}

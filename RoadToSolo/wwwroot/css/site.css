@@ -32,7 +32,16 @@ nav {
     display: flex;
     flex-direction: column;*/
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1;
+    margin-top: 20px;
+}
+
+.right-sidebar {
+    /*  grid-column: 1;
+    display: flex;
+    flex-direction: column;*/
+    grid-column: 3;
+    grid-row: 1;
     margin-top: 20px;
 }
 
@@ -69,21 +78,8 @@ a:hover {
     text-decoration: none;
 }
 
-
-.content {
-
-}
-
-.page-div {
-
-}
-
 .top-section {
     padding-top: 40px;
-}
-
-.posts-section {
-    
 }
 
 .road-section {
@@ -96,12 +92,8 @@ a:hover {
     font-family: 'Space Mono'
 }
 
-.milestone-section {
-
-}
-
-.milestone {
-/*    padding: 0px 0px 0px 0px;*/
+.sidebar {
+    /*    padding: 0px 0px 0px 0px;*/
     display: flex;
     flex-direction: column;
     border: 1px solid #dddddd;
@@ -110,7 +102,7 @@ a:hover {
 }
 
 .milestone-title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 900;
     margin-top: 5px;
 }
@@ -118,58 +110,39 @@ a:hover {
 .milestone-date {
     font-size: 12px;
     font-family: 'Space Mono', monospace;
-    margin-bottom: 0px;
     padding-top: 10px;
 }
 
-.milestone p {
+.sidebar p {
     font-family: 'Comfortaa', cursive;
 }
 
-.milestone-span {
+.sidebar-span {
     width: 2px;
     background-color: black;
     height: 10px;
     margin: auto;
 }
 
-.milestone-span:last-of-type {
+    .sidebar-span:last-of-type {
         display: none;
     }
 
-.milestones-section-title {
+.sidebar-section-title {
     text-align: center;
     font-size: 18px;
-    border: 1px solid black;
-    background-color: white;
     margin: 0px;
-    background-color: #dddddd;
-}
-/*.milestone-marker {
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    border: 1px solid grey;
-    grid-row: 1;
 }
 
-.milestone-line {
-    grid-row: 1;
-    border: 1px solid black;
-    grid-column: 1;
-}*/
-.milestone-container {
-    /*   display: flex;
-    flex-direction: row;
-    background-color: white;
-    border: solid 1px #dddddd;*/
-    /* width: 30px;*/
+.metric-value {
+    font-size: 12px;
+    font-weight: 900;
+    margin-top: 5px;
 }
 
-.solo-page {
-    /*display: grid;
-    grid-template-columns: 200px 500px 200px;*/
-    background-color: hotpink;
+.metric-title {
+    font-size: 12px;
+    padding-top: 10px;
 }
 
 .solo-main {
