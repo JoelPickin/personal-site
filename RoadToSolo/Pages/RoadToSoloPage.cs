@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using RoadToSolo.Data;
+using RoadToSolo.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -23,7 +23,6 @@ nav {
     grid-gap: 0px 0px;*/
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-gap: 10px;
     justify-content: center;
 }
 
@@ -55,13 +54,15 @@ nav {
     background-color: white;
     border: solid 1px #dddddd;
     padding: 0px 40px 0px 40px;
-    margin: 20px 0px 20px 0px;  
+    margin: 20px 20px 20px 20px;  
     grid-column: 2;
 }
 
 h1 {
     font-weight: 900;
     font-size: 28px;
+    padding-bottom: 10px;
+    padding-top: 40px;
 }
 
 ul {
@@ -76,10 +77,6 @@ a {
 a:hover {
     color: grey;
     text-decoration: none;
-}
-
-.top-section {
-    padding-top: 40px;
 }
 
 .road-section {
@@ -99,6 +96,7 @@ a:hover {
     border: 1px solid #dddddd;
     background-color: white;
     text-align: center;
+    height: 75px;
 }
 
 .milestone-title {
@@ -113,6 +111,10 @@ a:hover {
     padding-top: 10px;
 }
 
+.sidebar-container {
+    margin-bottom: 20px;
+}
+
 .sidebar p {
     font-family: 'Comfortaa', cursive;
 }
@@ -125,6 +127,10 @@ a:hover {
 }
 
     .sidebar-span:last-of-type {
+        display: none;
+    }
+
+    .sidebar-span:first-of-type {
         display: none;
     }
 
@@ -143,10 +149,6 @@ a:hover {
 .metric-title {
     font-size: 12px;
     padding-top: 10px;
-}
-
-.solo-main {
-   /* grid-column: 2;*/
 }
 
 .cls-1, .cls-7, .cls-9 {
@@ -263,6 +265,10 @@ a:hover {
         100% {
             opacity: 0;
         }
+    }
+
+    .sidebar {
+        display: none;
     }
 }
 
