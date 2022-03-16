@@ -4,7 +4,7 @@
         <h1>Posts.</h1>
 
         <div>
-            <ul>
+            <ul class="posts-list">
                 @foreach (var item in PostList)
                 {
                     <li><a href="@($"viewpost/{item.Id}")"> @item.Title </a></li>

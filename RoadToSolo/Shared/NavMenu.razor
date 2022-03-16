@@ -1,13 +1,12 @@
 ﻿<nav>
-    <div class="navbar-toggler">
-        <button class="@BtnToggled" id="toggle-btn" @onclick="ToggleNavMenu">
-            <RoadToSolo.Pages.Svg.HamburgerIcon />
-        </button>
-        @*<div class="@NavMenuCssClass">
-            <RoadToSolo.Pages.Svg.TwitterIcon />
-            <RoadToSolo.Pages.Svg.GithubIcon />
-        </div>*@
+    <div id="navbar-toggler">
+        <div id="menuToggle" class="@NavBarToggle" @onclick="ToggleNavMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
+
     <ul class="nav-bar">
         <li class="nav-item">
             <NavLink href="" Match="NavLinkMatch.All">
@@ -30,9 +29,13 @@
             </NavLink>
         </li>
     </ul>
-    <div class="nav-icons">
-        <RoadToSolo.Pages.Svg.TwitterIcon />
-        <RoadToSolo.Pages.Svg.GithubIcon />
+    <div id="nav-icons">
+        <a href="https://twitter.com/TechPickleJoel" target="_blank">
+            <RoadToSolo.Pages.Svg.TwitterIcon />
+        </a>
+        <a href="https://www.producthunt.com/@@joel_pickin" target="_blank">
+            <RoadToSolo.Pages.Svg.ProductHuntIcon />
+        </a>       
     </div>
 </nav>
 
@@ -61,17 +64,24 @@
     </ul>
 </nav>
 
+
 @code {
     private bool hideNavMenu = true;
     private bool showToggleBtn = true;
+    private bool toggleNavbar = true;
 
     private string NavMenuCssClass => hideNavMenu ? "hidden" : "visible";
     private string BtnToggled => showToggleBtn ? "btnNotToggled" : "btnToggled";
+    private string CloseBtnToggled => showToggleBtn ? "closeBtnToggled" : "closeBtnNotToggled";
+    private string NavMenuIconsToggled => hideNavMenu ? "nav-icons-hidden" : "nav-icons-visible";
+
+    private string NavBarToggle => toggleNavbar ? "closed" : "open";
 
 
     private void ToggleNavMenu()
     {
         hideNavMenu = !hideNavMenu;
         showToggleBtn = !showToggleBtn;
+        toggleNavbar = !toggleNavbar;
     }
 }

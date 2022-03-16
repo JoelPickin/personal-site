@@ -3,19 +3,25 @@
     <div class="sidebar-span"></div>
     @foreach (var milestone in MilestonesList)
     {
-        <div class="sidebar">
+<div class="sidebar">
 
-            @if (milestone.IsAchieved)
-            {
-                <p class="milestone-date">@milestone.AchievedDate</p>
-            }
-            else
-            {
-                <p class="milestone-date">@milestone.PredictedDate</p>
-            }
+    @if (milestone.IsAchieved)
+    {
+        <h2 class="milestone-indicator">✔️</h2>
 
-            <h2 class="milestone-title">@milestone.Title</h2>
-        </div>
+        <h2 class="milestone-title" style="text-decoration: line-through">@milestone.Title</h2>
+    }
+    else
+    {
+        @if (!string.IsNullOrEmpty(milestone.MilestoneIndicator))
+        {
+            <h2 class="milestone-indicator">@milestone.MilestoneIndicator</h2>
+        }
+
+        <h2 class="milestone-title">@milestone.Title</h2>
+    }
+
+</div>
         <div class="sidebar-span"></div>
     }
 </div>
