@@ -10,7 +10,7 @@ namespace RoadToSolo.Data.Repositories
     {
         private List<Project> _projectList { get; set; } = new List<Project>
         {
-            new Project{ Id=0, Title="This Website"},
+          
         };
 
         public List<Project> GetAll()

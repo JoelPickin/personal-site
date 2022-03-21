@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using RoadToSolo.Data;
+using RoadToSolo.Data.Services;
 using RoadToSolo.Shared;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,22 @@ namespace RoadToSolo.Pages
 {
     public partial class RoadToSoloPage
     {
+        [Inject]
+        private CalculationService _calculationService { get; set; } = default;
+
+        private double daysLeftAtWork;
         public List<Milestone> MilestonesList { get; set; }
         protected override Task OnInitializedAsync()
         {
             InitializeMilestones();
+            InitializeDaysLeftAtWork();
 
             return base.OnInitializedAsync();
+        }
+
+        private void InitializeDaysLeftAtWork()
+        {
+            daysLeftAtWork = _calculationService.GetDaysLeftAtWork();
         }
 
         protected override Task OnAfterRenderAsync(bool firstRender)

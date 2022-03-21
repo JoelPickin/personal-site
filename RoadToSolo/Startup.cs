@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RoadToSolo.Data;
 using RoadToSolo.Data.Repositories;
+using RoadToSolo.Data.Services;
 
 namespace RoadToSolo
 {
@@ -34,6 +35,7 @@ namespace RoadToSolo
             services.AddSingleton<MilestoneRepository>();
             services.AddSingleton<PostRepository>();
             services.AddSingleton<ProjectRepository>();
+            services.AddSingleton<CalculationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
