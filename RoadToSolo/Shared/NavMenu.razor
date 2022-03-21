@@ -1,4 +1,6 @@
-﻿<nav>
+﻿@using Pages; 
+
+<nav>
     <div id="navbar-toggler">
         <div id="menuToggle" class="@NavBarToggle" @onclick="ToggleNavMenu">
             <span></span>
@@ -23,11 +25,11 @@
                 <span aria-hidden="true"></span> Road To Solo
             </NavLink>
         </li>
-        <li class="nav-item">
-            <NavLink href="blog">
+        <RoadToSolo.Pages.Tooltip Text="Coming Soon!">
+            <li class="nav-item-coming-soon">
                 <span aria-hidden="true"></span> Blog
-            </NavLink>
-        </li>
+            </li>
+        </RoadToSolo.Pages.Tooltip>
     </ul>
     <div id="nav-icons">
         <a href="https://twitter.com/TechPickleJoel" target="_blank">
@@ -56,11 +58,11 @@
                 <span aria-hidden="true"></span> Road To Solo
             </NavLink>
         </li>
-        <li>
-            <NavLink href="blog">
-                <span aria-hidden="true"></span> Blog
-            </NavLink>
-        </li>
+        <RoadToSolo.Pages.Tooltip Text="Coming Soon!">
+            <li class="nav-item-coming-soon">
+                    <span aria-hidden="true"></span> Blog
+            </li>
+        </RoadToSolo.Pages.Tooltip>
     </ul>
 </nav>
 

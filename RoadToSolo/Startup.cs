@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RoadToSolo.Data;
+using RoadToSolo.Data.Repositories;
 
 namespace RoadToSolo
 {
@@ -28,6 +29,11 @@ namespace RoadToSolo
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddHttpClient();
+            services.AddSingleton<MetricRepository>();
+            services.AddSingleton<MilestoneRepository>();
+            services.AddSingleton<PostRepository>();
+            services.AddSingleton<ProjectRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

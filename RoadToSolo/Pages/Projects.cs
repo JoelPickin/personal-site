@@ -1,4 +1,6 @@
-﻿using RoadToSolo.Data;
+﻿using Microsoft.AspNetCore.Components;
+using RoadToSolo.Data;
+using RoadToSolo.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,10 @@ namespace RoadToSolo.Pages
 {
     public partial class Projects
     {
+        [Inject]
+        private ProjectRepository _projectRepository { get; set; } = default;
         public List<Project> ProjectList { get; set; }
+
         protected override Task OnInitializedAsync()
         {
             InitializeProjects();
@@ -18,10 +23,7 @@ namespace RoadToSolo.Pages
 
         private void InitializeProjects()
         {
-            ProjectList = new List<Project>()
-            {
-                new Project{ Id=0, Title="This Website"}
-            };
+            ProjectList = _projectRepository.GetAll();
         }
     }
 }

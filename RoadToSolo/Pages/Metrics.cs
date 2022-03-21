@@ -1,4 +1,6 @@
-﻿using RoadToSolo.Data;
+﻿using Microsoft.AspNetCore.Components;
+using RoadToSolo.Data;
+using RoadToSolo.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,8 @@ namespace RoadToSolo.Pages
 {
     public partial class Metrics
     {
+        [Inject]
+        private MetricRepository _metricsRepository { get; set; } = default;
         public List<Metric> MetricsList { get; set; }
 
         protected override Task OnInitializedAsync()
@@ -19,15 +23,7 @@ namespace RoadToSolo.Pages
 
         private void InitializeMetrics()
         {
-            MetricsList = new List<Metric>()
-            {
-                new Metric { Title = "Days Runway Remaining", Value="196" },
-                new Metric { Title = "Days Until I Leave", Value="204" },
-                new Metric { Title = "Overall Revenue", Value="£0" },
-                new Metric { Title = "MRR", Value="£0" },
-                new Metric { Title = "ARR", Value="£0" },
-                new Metric { Title = "Projects Created", Value="1" }
-            };
+            MetricsList = _metricsRepository.GetAll();
         }
     }
 }
