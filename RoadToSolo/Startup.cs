@@ -40,6 +40,12 @@ namespace RoadToSolo
             services.AddSingleton<PostRepository>();
             services.AddSingleton<ProjectRepository>();
             services.AddSingleton<CalculationService>();
+
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = (int)HttpStatusCode.TemporaryRedirect;
+                options.HttpsPort = 5001;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
