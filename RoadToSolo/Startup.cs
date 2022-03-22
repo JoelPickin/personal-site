@@ -45,7 +45,7 @@ namespace RoadToSolo
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.ForwardedHeaders =
-                    ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                    ForwardedHeaders.XForwardedProto;
             });
 
             services.AddHttpsRedirection(options =>
