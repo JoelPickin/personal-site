@@ -41,14 +41,14 @@ namespace RoadToSolo
             services.AddSingleton<ProjectRepository>();
             services.AddSingleton<CalculationService>();
 
-            if (!CurrentEnvironment.IsDevelopment())
-            {
-                services.AddHttpsRedirection(options =>
-                {
-                    options.RedirectStatusCode = (int)HttpStatusCode.PermanentRedirect;
-                    options.HttpsPort = 443;
-                });
-            }
+            //if (!CurrentEnvironment.IsDevelopment())
+            //{
+            //    services.AddHttpsRedirection(options =>
+            //    {
+            //        options.RedirectStatusCode = (int)HttpStatusCode.PermanentRedirect;
+            //        options.HttpsPort = 443;
+            //    });
+            //}
             //services.AddHttpsRedirection(options =>
             //{
             //    options.HttpsPort = 443;
