@@ -41,24 +41,10 @@ namespace RoadToSolo
             services.AddSingleton<ProjectRepository>();
             services.AddSingleton<CalculationService>();
 
-            //if (!CurrentEnvironment.IsDevelopment())
-            //{
-            //    services.AddHttpsRedirection(options =>
-            //    {
-            //        options.RedirectStatusCode = (int)HttpStatusCode.PermanentRedirect;
-            //        options.HttpsPort = 443;
-            //    });
-            //}
-            //services.AddHttpsRedirection(options =>
-            //{
-            //    options.HttpsPort = 443;
-            //});
-
-            //services.Configure<ForwardedHeadersOptions>(options =>
-            //{
-            //    options.ForwardedHeaders =
-            //        ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-            //});
+            services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 443;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
