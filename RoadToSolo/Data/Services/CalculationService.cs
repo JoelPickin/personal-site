@@ -13,7 +13,7 @@ namespace RoadToSolo.Data.Services
         private string revenue = "£0k";
 
         private decimal savings;
-        private decimal currentSavings = 8000;
+        private decimal currentSavings = 9500;
         private decimal monthlySavings = 1500;
         private double runway;
 
@@ -52,13 +52,15 @@ namespace RoadToSolo.Data.Services
 
         public decimal GetSavings()
         {
-            var startDate = DateTime.Today;
+            var startDate = new DateTime(2022, 03, 25);
 
-            var endDate = new DateTime(2022, 07, 30);
+            var currentDate = DateTime.Now;
 
-            var monthsLeft = ((startDate.Year - endDate.Year) * 12) + endDate.Month - startDate.Month;
+            var monthsSaved = startDate.Month - currentDate.Month;
 
-            savings = currentSavings + (monthsLeft * monthlySavings);
+            var savingsAmount = monthlySavings * monthsSaved;
+
+            savings = currentSavings + savingsAmount;
 
             return savings;
         }
