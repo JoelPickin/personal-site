@@ -4,11 +4,18 @@
         <h1>Posts.</h1>
 
         <div>
-            <ul class="posts-list">
-                @foreach (var item in PostList)
-                {
-                    <li><a href="@($"viewpost/{item.Id}")"> @item.Title </a></li>
-                }
-            </ul>
+            @if (PostList.Count == 0)
+            {
+                <p class="nav-item-coming-soon">Some posts will be going here.</p>
+            }
+            else
+            {
+                <ul class="posts-list">
+                    @foreach (var item in PostList)
+                    {
+                        <li><a href="@($"viewpost/{item.Id}")"> @item.Title </a></li>
+                    }
+                </ul>
+            }
         </div>
     </div>
