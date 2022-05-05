@@ -7,7 +7,7 @@ namespace RoadToSolo.Data.Services
 {
     public class CalculationService
     {
-        private DateTime leaveWorkDate = new DateTime(2022, 10, 01);
+        private DateTime leaveWorkDate = new DateTime(2022, 07, 30);
         private double daysLeftAtWork;
 
         private string revenue = "£0k";
