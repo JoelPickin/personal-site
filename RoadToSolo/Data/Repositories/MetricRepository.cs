@@ -33,7 +33,8 @@ namespace RoadToSolo.Data.Repositories
                 new Metric { Title = "Overall Revenue", Value="£0" },
                 new Metric { Title = "MRR", Value="£0" },
                 new Metric { Title = "ARR", Value="£0" },
-                new Metric { Title = "Projects Created", Value="1" }
+                new Metric { Title = "Projects Created", Value="2" },
+                new Metric { Title = "Community Members", Value="240" }
             };
         }
 
