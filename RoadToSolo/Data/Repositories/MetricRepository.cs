@@ -16,10 +16,12 @@ namespace RoadToSolo.Data.Repositories
 
         private double runway;
         private double daysUntilLeave;
+        private string revenue;
 
         public MetricRepository()
         {
             runway = _calculationService.GetRunwayDays();
+            revenue = _calculationService.GetRevenue();
             daysUntilLeave = _calculationService.GetDaysLeftAtWork();
             _metrics = InitializeMetrics();
         }
@@ -30,11 +32,11 @@ namespace RoadToSolo.Data.Repositories
             {
                 new Metric { Title = "Days Runway Remaining", Value= $"{runway}" },
                 new Metric { Title = "Days Until I Leave", Value=$"{daysUntilLeave}" },
-                new Metric { Title = "Overall Revenue", Value="£0" },
-                new Metric { Title = "MRR", Value="£0" },
-                new Metric { Title = "ARR", Value="£0" },
+                new Metric { Title = "Overall Revenue", Value=$"{revenue}" },
+                new Metric { Title = "MRR", Value="$0" },
+                new Metric { Title = "ARR", Value="$0" },
                 new Metric { Title = "Projects Created", Value="2" },
-                new Metric { Title = "Community Members", Value="240" }
+                new Metric { Title = "Community Members", Value="367" }
             };
         }
 

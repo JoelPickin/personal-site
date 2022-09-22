@@ -12,10 +12,10 @@ namespace RoadToSolo.Data.Repositories
         {
             new Milestone{ Title="Release Website", IsAchieved=true, AchievedDate="21 Mar 2022" },
             new Milestone{ Title="Release Project 1", IsAchieved=true, MilestoneIndicator="1️⃣" },
-            new Milestone{ Title="Release Project 2", MilestoneIndicator="2️⃣" },
+            new Milestone{ Title="Release Project 2", MilestoneIndicator="2️⃣", IsAchieved=true },
             new Milestone{ Title="Release Project 3", MilestoneIndicator="3️⃣" },
             new Milestone{ Title="Release Project 4", MilestoneIndicator="4️⃣" },
-            new Milestone{ Title="First Dollar Made", MilestoneIndicator="💵" },
+            new Milestone{ Title="First Dollar Made", MilestoneIndicator="💵", IsAchieved=true },
             new Milestone{ Title="Cover My Bills", MilestoneIndicator="💰" },
             new Milestone{ Title="Cover Full Household Bills", MilestoneIndicator="🤑" },
             new Milestone{ Title="Web 3 Project", MilestoneIndicator="🚀" },

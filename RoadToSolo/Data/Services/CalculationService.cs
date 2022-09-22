@@ -10,11 +10,11 @@ namespace RoadToSolo.Data.Services
         private DateTime leaveWorkDate = new DateTime(2022, 07, 30);
         private double daysLeftAtWork;
 
-        private string revenue = "£0k";
+        private string revenue = "$1000";
 
-        private decimal savings;
-        private decimal currentSavings = 9500;
-        private decimal monthlySavings = 1500;
+        //private decimal savings;
+        private decimal currentSavings = 13126;
+        //private decimal monthlySavings = 1500;
         private double runway;
 
         public CalculationService()
@@ -24,7 +24,7 @@ namespace RoadToSolo.Data.Services
 
         public double GetDaysLeftAtWork()
         {
-            daysLeftAtWork = Math.Round((leaveWorkDate - DateTime.Now).TotalDays);
+            daysLeftAtWork = Math.Round((DateTime.Now - leaveWorkDate).TotalDays);
 
             return daysLeftAtWork;
         }
@@ -36,7 +36,7 @@ namespace RoadToSolo.Data.Services
 
         public double GetRunwayDays()
         {
-            var runwayDecimal = GetSavings() / 1250;
+            var runwayDecimal = GetSavings() / 500;
             var rightDecimal = runwayDecimal % 1;
             var leftDecimal = decimal.ToInt16(runwayDecimal);
             var dayPercentage = decimal.ToInt16(rightDecimal * 100);
@@ -52,17 +52,17 @@ namespace RoadToSolo.Data.Services
 
         public decimal GetSavings()
         {
-            var startDate = new DateTime(2022, 03, 25);
+            //var startDate = new DateTime(2022, 03, 25);
 
-            var currentDate = DateTime.Now;
+            //var currentDate = DateTime.Now;
 
-            var monthsSaved = startDate.Month - currentDate.Month;
+            //var monthsSaved = startDate.Month - currentDate.Month;
 
-            var savingsAmount = monthlySavings * monthsSaved;
+            //var savingsAmount = monthlySavings * monthsSaved;
 
-            savings = currentSavings + savingsAmount;
+            //savings = currentSavings + savingsAmount;
 
-            return savings;
+            return currentSavings;
         }
     }
 }
